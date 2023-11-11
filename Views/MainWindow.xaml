@@ -18,21 +18,12 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <materialDesign:Card Grid.Row="0" Margin="10" Padding="5">
+        <materialDesign:Card Grid.Row="0" Margin="10" Padding="5,10,5,10">
             <StackPanel>
-                <TextBlock
-                  Margin="16,4,12,8"
-                  FontSize="16"
-                  Text="このアプリについて" />
-                <TextBlock
-                  Margin="16,4,16,0"
-                  Text="NECのワイヤレススイッチ搭載PCで、常に機内モードになってしまう現象を回避するためのアプリです。" />
-                <TextBlock
-                  Margin="16,4,16,0"
-                  Text="「NEC HID Mini-driver for Hardware Radio Switch」というドライバを削除し、再起動することで回避します。" />
-                <TextBlock
-                  Margin="16,4,16,4"
-                  Text="ただし、2回以上再起動してしまうとドライバが復活してしまうため、機内モードになる度にこのアプリを実行してください。" />
+                <TextBlock Style="{StaticResource UsageTitle}" Text="このアプリについて" />
+                <TextBlock Style="{StaticResource Usage}" Text="NECのワイヤレススイッチ搭載PCで、常に機内モードになってしまう現象を回避するためのアプリです。" />
+                <TextBlock Style="{StaticResource Usage}" Text="「NEC HID Mini-driver for Hardware Radio Switch」というドライバを削除し、再起動することで回避します。" />
+                <TextBlock Style="{StaticResource Usage}" Text="ただし、2回以上再起動してしまうとドライバが復活してしまうため、機内モードになる度にこのアプリを実行してください。" />
             </StackPanel>
         </materialDesign:Card>
         <Grid Grid.Row="1" >
@@ -40,16 +31,16 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <Button Grid.Column="0" Grid.ColumnSpan="2" Margin="10" Style="{StaticResource MaterialDesignPaperButton}" Content="実行" Visibility="{Binding VisibilityStart}" Click="Start_Click" />
+            <Button Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource PrimaryButton}" Content="実行" Visibility="{Binding VisibilityStart}" Click="Start_Click" />
             <Button Grid.Column="0" 
                     materialDesign:ButtonProgressAssist.IsIndeterminate="True"
                     materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"
                     materialDesign:ButtonProgressAssist.Value="-1"
                     IsEnabled="False"
-                    Margin="10" Style="{StaticResource MaterialDesignPaperButton}" Content="実行中" Visibility="{Binding VisibilityRunning}" />
-            <Button Grid.Column="0" Margin="10" Style="{StaticResource MaterialDesignPaperButton}" Content="今すぐアプリを終了" Visibility="{Binding VisibilityExit}" Click="Skip_Click" />
-            <Button Grid.Column="0" Margin="10" Style="{StaticResource MaterialDesignPaperButton}" Content="今すぐPC再起動" Visibility="{Binding VisibilityReboot}" Click="Skip_Click" />
-            <Button Grid.Column="1" Margin="10" Content="キャンセル" Visibility="{Binding VisibilityCancel}" Click="Cancel_Click" />
+                    Style="{StaticResource PrimaryButton}" Content="実行中" Visibility="{Binding VisibilityRunning}" />
+            <Button Grid.Column="0" Style="{StaticResource SecondaryButton}" Content="今すぐアプリを終了" Visibility="{Binding VisibilityExit}" Click="Skip_Click" />
+            <Button Grid.Column="0" Style="{StaticResource SecondaryButton}" Content="今すぐPC再起動" Visibility="{Binding VisibilityReboot}" Click="Skip_Click" />
+            <Button Grid.Column="1" Style="{StaticResource PrimaryButton}" Content="キャンセル" Visibility="{Binding VisibilityCancel}" Click="Cancel_Click" />
         </Grid>
         <ListBox x:Name="listBox" Grid.Row="2"  ItemsSource="{Binding Items}">
             <ListBox.ItemContainerStyle>

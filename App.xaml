@@ -31,6 +31,24 @@
                 <Setter Property="Margin" Value="10,5,10,5"/>
             </Style>
 
+            <Style x:Key="UsageTitle" TargetType="TextBlock"   BasedOn="{StaticResource MaterialDesignTextBlock}">
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="Margin" Value="20,0,20,10" />
+                <Setter Property="Padding" Value="0,0,0,0" />
+            </Style>
+            
+            <Style x:Key="Usage" TargetType="TextBlock"   BasedOn="{StaticResource MaterialDesignTextBlock}">
+                <Setter Property="Margin" Value="20,0,20,0" />
+                <Setter Property="Padding" Value="0,0,0,0" />
+            </Style>
+
+            <Style x:Key="PrimaryButton" TargetType="Button" BasedOn="{StaticResource MaterialDesignRaisedButton}">
+                <Setter Property="Margin" Value="10" />
+            </Style>
+            <Style x:Key="SecondaryButton" TargetType="Button" BasedOn="{StaticResource MaterialDesignPaperButton}">
+                <Setter Property="Margin" Value="10" />
+            </Style>
+
         </ResourceDictionary>
 
     </Application.Resources>
