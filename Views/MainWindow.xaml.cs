@@ -28,7 +28,7 @@ namespace RemoveWirelessSwitchDriver
     public partial class MainWindow : MetroWindow
     {
         public static MainViewModel viewModel;
-        const string LOGFILE = "log.xml";
+        const string LOGFILE = "Log.xml";
 
         public MainWindow()
         {

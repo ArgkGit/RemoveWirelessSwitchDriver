@@ -19,7 +19,8 @@ namespace RemoveWirelessSwitchDriver.Models
 
             for(int i = cnt * DIVISION; i > 0; i--)
             {
-                if (MainWindow.viewModel.SkipFlg) return false;
+                if (MainWindow.viewModel.CancelFlg) return false;
+                if (MainWindow.viewModel.SkipFlg) return true;
 
                 await Task.Delay(100);
 
