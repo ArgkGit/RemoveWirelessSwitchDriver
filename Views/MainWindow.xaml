@@ -40,15 +40,15 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <Button Grid.Column="0" Grid.ColumnSpan="2" Margin="10" Content="実行" Visibility="{Binding VisibilityStart}" Click="Start_Click" />
+            <Button Grid.Column="0" Grid.ColumnSpan="2" Margin="10" Style="{StaticResource MaterialDesignPaperButton}" Content="実行" Visibility="{Binding VisibilityStart}" Click="Start_Click" />
             <Button Grid.Column="0" 
                     materialDesign:ButtonProgressAssist.IsIndeterminate="True"
                     materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"
                     materialDesign:ButtonProgressAssist.Value="-1"
                     IsEnabled="False"
-                    Margin="10" Content="実行中" Visibility="{Binding VisibilityRunning}" />
-            <Button Grid.Column="0" Margin="10" Content="今すぐアプリを終了" Visibility="{Binding VisibilityExit}" Click="Skip_Click" />
-            <Button Grid.Column="0" Margin="10" Content="今すぐPC再起動" Visibility="{Binding VisibilityReboot}" Click="Skip_Click" />
+                    Margin="10" Style="{StaticResource MaterialDesignPaperButton}" Content="実行中" Visibility="{Binding VisibilityRunning}" />
+            <Button Grid.Column="0" Margin="10" Style="{StaticResource MaterialDesignPaperButton}" Content="今すぐアプリを終了" Visibility="{Binding VisibilityExit}" Click="Skip_Click" />
+            <Button Grid.Column="0" Margin="10" Style="{StaticResource MaterialDesignPaperButton}" Content="今すぐPC再起動" Visibility="{Binding VisibilityReboot}" Click="Skip_Click" />
             <Button Grid.Column="1" Margin="10" Content="キャンセル" Visibility="{Binding VisibilityCancel}" Click="Cancel_Click" />
         </Grid>
         <ListBox x:Name="listBox" Grid.Row="2"  ItemsSource="{Binding Items}">
