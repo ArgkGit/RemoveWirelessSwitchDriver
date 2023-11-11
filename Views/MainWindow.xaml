@@ -18,7 +18,7 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <materialDesign:Card Grid.Row="0" Margin="10" Padding="5,10,5,10">
+        <materialDesign:Card Grid.Row="0" Style="{StaticResource UsageCard}">
             <StackPanel>
                 <TextBlock Style="{StaticResource UsageTitle}" Text="このアプリについて" />
                 <TextBlock Style="{StaticResource Usage}" Text="NECのワイヤレススイッチ搭載PCで、常に機内モードになってしまう現象を回避するためのアプリです。" />
@@ -44,9 +44,7 @@
         </Grid>
         <ListBox x:Name="listBox" Grid.Row="2"  ItemsSource="{Binding Items}">
             <ListBox.ItemContainerStyle>
-                <Style TargetType="ListBoxItem" BasedOn="{StaticResource MaterialDesignListBoxItem}">
-                    <Setter Property="Padding" Value="5,0,0,0" />
-                </Style>
+                <StaticResource ResourceKey="ListBoxItemStyle"/>
             </ListBox.ItemContainerStyle>
         </ListBox>
     </Grid>

@@ -27,8 +27,9 @@
 
             </ResourceDictionary.MergedDictionaries>
 
-            <Style TargetType="{x:Type ListBox}" BasedOn="{StaticResource MaterialDesignListBox}">
-                <Setter Property="Margin" Value="10,5,10,5"/>
+            <Style x:Key="UsageCard" TargetType="materialDesign:Card">
+                <Setter Property="Margin" Value="10" />
+                <Setter Property="Padding" Value="5,10,5,10" />
             </Style>
 
             <Style x:Key="UsageTitle" TargetType="TextBlock"   BasedOn="{StaticResource MaterialDesignTextBlock}">
@@ -48,6 +49,15 @@
             <Style x:Key="SecondaryButton" TargetType="Button" BasedOn="{StaticResource MaterialDesignPaperButton}">
                 <Setter Property="Margin" Value="10" />
             </Style>
+
+            <Style TargetType="{x:Type ListBox}" BasedOn="{StaticResource MaterialDesignListBox}">
+                <Setter Property="Margin" Value="10,5,10,5"/>
+            </Style>
+
+            <Style x:Key="ListBoxItemStyle" TargetType="ListBoxItem" BasedOn="{StaticResource MaterialDesignListBoxItem}">
+                <Setter Property="Padding" Value="5,0,0,0" />
+            </Style>
+
 
         </ResourceDictionary>
 
